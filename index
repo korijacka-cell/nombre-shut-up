@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Enchililadas · Nombre Shut Up — Authentic San Antonio Tex-Mex</title>
+<meta name="description" content="Family-owned San Antonio food truck. Birria, quesabirria, enchililadas & more. Where tradition meets every bite. Order pickup or delivery." />
+
+<!-- ============================================================
+     IMAGE NOTE (read before production):
+     The three hero/food images below reference Bloom's CDN for live
+     preview. Before deploying to the client, export them from Bloom
+     and drop them in ./assets/ , then swap the URLs to local paths:
+       assets/namesake.jpg  (16:9 enchilada plate — hero)
+       assets/dip.jpg        (9:16 quesabirria cheese pull)
+       assets/spread.jpg     (1:1 table flat-lay)
+     Self-hosting protects you from CDN/hotlink/expiry issues.
+
+     TODO PLACEHOLDERS — replace with real client data:
+       • PHONE  -> currently (210) 555-0100  (search "TODO:PHONE")
+       • FACEBOOK URL  (search "TODO:FB")
+       • TIKTOK URL    (search "TODO:TIKTOK")
+       • HOURS         (search "TODO:HOURS")
+       • EMAIL         (search "TODO:EMAIL")
+     ============================================================ -->
+
+<!-- Open Graph / social share -->
+<meta property="og:title" content="Enchililadas · Nombre Shut Up" />
+<meta property="og:description" content="Authentic San Antonio Tex-Mex. Birria, quesabirria & enchililadas. Order pickup or delivery." />
+<meta property="og:type" content="restaurant" />
+<meta property="og:url" content="https://www.nombre-shut-up.com" />
+<meta property="og:image" content="https://www.trybloom.ai/img/9945eb88-e510-4b1b-b815-0ef60ef3b44b" />
+<meta name="theme-color" content="#1C1C1C" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#1C1C1C;
+    --ink-soft:#2a2724;
+    --cream:#FAF3E7;
+    --cream-deep:#F1E6D2;
+    --paper:#FFFDF8;
+    --chili:#C92A2A;
+    --chili-dark:#9e1f1f;
+    --orange:#E86C2F;
+    --gold:#B5853A;
+    --gray:#6b6560;
+    --line:rgba(28,28,28,.14);
+    --shadow:0 18px 40px -18px rgba(28,28,28,.45);
+    --shadow-sm:0 8px 22px -12px rgba(28,28,28,.4);
+    --display:'Bricolage Grotesque',system-ui,sans-serif;
+    --body:'Hanken Grotesk',system-ui,sans-serif;
+    --hand:'Caveat',cursive;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    /* subtle paper grain */
+    background-image:
+      radial-gradient(rgba(181,133,58,.035) 1px, transparent 1px);
+    background-size:18px 18px;
+  }
+  h1,h2,h3,h4{font-family:var(--display);line-height:1.02;letter-spacing:-.02em;font-weight:800}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- wordmark ---------- */
+  .wordmark{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:.9}
+  .wordmark .c{color:var(--chili)}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    font-family:var(--display);font-weight:700;font-size:.98rem;
+    padding:.85rem 1.5rem;border-radius:999px;cursor:pointer;border:2px solid transparent;
+    transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--chili);color:#fff;box-shadow:var(--shadow-sm)}
+  .btn-primary:hover{background:var(--chili-dark);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--cream);transform:translateY(-2px)}
+  .btn-light{background:var(--cream);color:var(--ink)}
+  .btn-light:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+
+  /* ---------- announcement bar ---------- */
+  .announce{
+    background:var(--ink);color:var(--cream);font-size:.82rem;
+    display:flex;justify-content:center;gap:1.6rem;align-items:center;
+    padding:.5rem 1rem;flex-wrap:wrap;font-weight:500;letter-spacing:.02em;
+  }
+  .announce .dot{width:5px;height:5px;border-radius:50%;background:var(--orange);display:inline-block}
+  .announce a{color:var(--cream);font-weight:700;border-bottom:1px solid var(--orange)}
+
+  /* ---------- nav ---------- */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(250,243,231,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{font-family:var(--display);font-weight:800;font-size:1.5rem;letter-spacing:-.04em}
+  .brand .c{color:var(--chili)}
+  .brand small{display:block;font-family:var(--body);font-weight:600;font-size:.56rem;letter-spacing:.42em;color:var(--gray);margin-top:-2px}
+  .nav-links{display:flex;align-items:center;gap:2rem}
+  .nav-links a{font-weight:600;font-size:.95rem;position:relative}
+  .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--chili);transition:width .25s ease}
+  .nav-links a:not(.btn):hover::after{width:100%}
+  .menu-toggle{display:none;background:none;border:0;cursor:pointer;font-size:1.6rem}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:var(--cream);overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:#000}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.62;transform:scale(1.05);animation:slowzoom 14s ease-out forwards}
+  @keyframes slowzoom{to{transform:scale(1)}}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.55) 0%,rgba(20,18,16,.25) 35%,rgba(20,18,16,.82) 100%);z-index:1}
+  .hero-content{position:relative;z-index:2;padding:0 0 70px;width:100%}
+  .hero .eyebrow{font-family:var(--hand);font-size:1.7rem;color:#ffd9a0;transform:rotate(-3deg);display:inline-block;margin-bottom:.2rem}
+  .hero h1{font-size:clamp(3rem,9vw,7rem);text-transform:uppercase;letter-spacing:-.04em;text-shadow:0 4px 30px rgba(0,0,0,.4)}
+  .hero h1 .c{color:var(--orange)}
+  .hero .sub{font-size:clamp(1.05rem,2vw,1.35rem);max-width:540px;margin:1.1rem 0 1.8rem;color:#f3e7d4;font-weight:500}
+  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+
+  /* ---------- shout band ---------- */
+  .shout{background:var(--chili);color:var(--cream);overflow:hidden;padding:.9rem 0;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+  .shout-track{display:flex;gap:3rem;white-space:nowrap;animation:scroll 26s linear infinite;font-family:var(--display);font-weight:800;font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em}
+  .shout-track span{display:inline-flex;align-items:center;gap:3rem}
+  .shout-track .star{color:#ffd9a0}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* ---------- section base ---------- */
+  section.block{padding:96px 0}
+  .kicker{font-family:var(--hand);font-size:1.6rem;color:var(--chili);transform:rotate(-2deg);display:inline-block}
+  .section-title{font-size:clamp(2.2rem,5vw,3.6rem);text-transform:uppercase;margin:.2rem 0 .6rem}
+  .lede{color:var(--gray);font-size:1.1rem;max-width:560px}
+
+  /* ---------- featured ---------- */
+  .featured{background:var(--cream-deep)}
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:46px}
+  .feat-card{background:var(--paper);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--line);transition:transform .25s ease,box-shadow .25s ease}
+  .feat-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+  .feat-card .ph{aspect-ratio:4/3;overflow:hidden;background:#ddd}
+  .feat-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .feat-card:hover .ph img{transform:scale(1.07)}
+  .feat-body{padding:22px 24px 26px}
+  .feat-body h3{font-size:1.4rem;display:flex;justify-content:space-between;align-items:baseline;gap:.5rem}
+  .feat-body .price{color:var(--chili);font-family:var(--display);font-weight:800}
+  .feat-body p{color:var(--gray);font-size:.95rem;margin-top:.4rem}
+  .tag{display:inline-block;font-family:var(--display);font-weight:700;font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--orange);background:rgba(232,108,47,.12);padding:.25rem .6rem;border-radius:999px;margin-bottom:.7rem}
+
+  /* ---------- menu ---------- */
+  .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 56px;margin-top:42px}
+  .menu-cat{break-inside:avoid}
+  .menu-cat h3{font-size:1.5rem;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:.7rem;margin-bottom:.4rem}
+  .menu-cat h3::after{content:"";flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 12px);opacity:.5}
+  .menu-cat .note{font-size:.8rem;color:var(--orange);font-weight:600;margin-bottom:.5rem;font-style:italic}
+  .menu-item{display:flex;align-items:baseline;gap:.6rem;padding:.32rem 0;border-bottom:1px dotted var(--line)}
+  .menu-item .nm{font-weight:600}
+  .menu-item .ln{flex:1}
+  .menu-item .pr{font-family:var(--display);font-weight:700;color:var(--ink-soft);white-space:nowrap}
+  .menu-foot{margin-top:34px;text-align:center}
+
+  /* ---------- find us ---------- */
+  .findus{background:var(--ink);color:var(--cream)}
+  .findus .section-title{color:var(--cream)}
+  .findus .kicker{color:var(--orange)}
+  .find-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;margin-top:40px}
+  .find-info .row{display:flex;gap:.9rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .find-info .ic{font-size:1.4rem;line-height:1.4}
+  .find-info h4{font-family:var(--display);font-size:1.05rem;text-transform:uppercase;letter-spacing:.04em;color:#ffd9a0}
+  .find-info p,.find-info a{color:#e8ddca;font-size:1rem}
+  .find-info a:hover{color:#fff;text-decoration:underline}
+  .map-frame{border-radius:20px;overflow:hidden;border:3px solid rgba(255,255,255,.12);box-shadow:var(--shadow);min-height:360px}
+  .map-frame iframe{width:100%;height:100%;min-height:360px;border:0;filter:grayscale(.15) contrast(1.02)}
+
+  /* ---------- about / pillars ---------- */
+  .about{background:var(--cream)}
+  .about-head{text-align:center;max-width:680px;margin:0 auto}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px}
+  .pillar{text-align:center;padding:32px 24px;background:var(--paper);border-radius:20px;border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+  .pillar .emoji{font-size:2.2rem}
+  .pillar h4{font-family:var(--display);font-size:1.2rem;text-transform:uppercase;margin:.7rem 0 .4rem}
+  .pillar p{color:var(--gray);font-size:.95rem}
+
+  /* ---------- big CTA ---------- */
+  .cta{position:relative;color:var(--cream);text-align:center;overflow:hidden}
+  .cta-bg{position:absolute;inset:0}
+  .cta-bg img{width:100%;height:100%;object-fit:cover;opacity:.4}
+  .cta::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(28,28,28,.78),rgba(28,28,28,.86));z-index:1}
+  .cta .inner{position:relative;z-index:2;padding:110px 24px}
+  .cta h2{font-size:clamp(2.4rem,6vw,4.5rem);text-transform:uppercase}
+  .cta h2 .c{color:var(--orange)}
+  .cta p{font-family:var(--hand);font-size:1.8rem;color:#ffd9a0;margin:.4rem 0 1.6rem;transform:rotate(-2deg)}
+
+  /* ---------- footer ---------- */
+  footer.foot{background:var(--ink-soft);color:#d9cdb9;padding:64px 0 28px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+  .foot .brand{color:var(--cream);font-size:1.8rem}
+  .foot p{font-size:.92rem;margin-top:.8rem;max-width:320px}
+  .foot h5{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:.85rem;color:#ffd9a0;margin-bottom:1rem}
+  .foot ul{list-style:none}
+  .foot li{margin-bottom:.6rem;font-size:.95rem}
+  .foot a:hover{color:#fff;text-decoration:underline}
+  .socials{display:flex;gap:.8rem;margin-top:1rem}
+  .socials a{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:background .2s ease,transform .2s ease}
+  .socials a:hover{background:var(--chili);transform:translateY(-3px)}
+  .socials svg{width:20px;height:20px;fill:#e8ddca}
+  .socials a:hover svg{fill:#fff}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:46px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem;color:#9c917f}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:880px){
+    .nav-links{position:fixed;inset:74px 0 auto 0;background:var(--cream);flex-direction:column;align-items:stretch;gap:0;padding:10px 24px 24px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .3s ease;box-shadow:var(--shadow)}
+    .nav-links.open{transform:none}
+    .nav-links a{padding:.9rem 0;border-bottom:1px solid var(--line)}
+    .nav-links a:not(.btn)::after{display:none}
+    .nav-links .btn{margin-top:.8rem;justify-content:center}
+    .menu-toggle{display:block}
+    .feat-grid,.pillars{grid-template-columns:1fr}
+    .menu-grid,.find-grid,.foot-grid{grid-template-columns:1fr;gap:34px}
+    section.block{padding:64px 0}
+    .hero{min-height:80vh}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ ANNOUNCEMENT ============ -->
+<div class="announce">
+  <span><span class="dot"></span>&nbsp; Now serving San Antonio — pickup &amp; delivery</span>
+  <span class="hide-sm">Call the truck: <a href="tel:+12105550100">(210) 555-0100</a><!-- TODO:PHONE --></span>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">EN<span class="c">CHILI</span>LADAS<small>NOMBRE SHUT UP</small></a>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="#menu">Menu</a>
+      <a href="#featured">Favorites</a>
+      <a href="#findus">Find Us</a>
+      <a href="#about">Our Story</a>
+      <a href="#order" class="btn btn-primary">Order Now</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <!-- assets/namesake.jpg -->
+    <img src="https://www.trybloom.ai/img/9945eb88-e510-4b1b-b815-0ef60ef3b44b" alt="Enchiladas plate with rice and beans" />
+  </div>
+  <div class="hero-content">
+    <div class="wrap">
+      <span class="eyebrow reveal">¡Nombre, shut up!</span>
+      <h1 class="reveal">Where tradition<br>meets <span class="c">every bite</span></h1>
+      <p class="sub reveal">Family-owned San Antonio Tex-Mex done loud and done right — birria, quesabirria, and our namesake enchililadas. Homemade, licensed &amp; inspected, and worth the napkins.</p>
+      <div class="hero-cta reveal">
+        <a href="#order" class="btn btn-primary">Order Pickup or Delivery</a>
+        <a href="#menu" class="btn btn-light">See the Menu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOUT BAND ============ -->
+<div class="shout" aria-hidden="true">
+  <div class="shout-track">
+    <span>Birria <span class="star">✦</span> Quesabirria <span class="star">✦</span> Enchililadas <span class="star">✦</span> Tacos <span class="star">✦</span> Cold Drinks <span class="star">✦</span> Tradition in Every Bite <span class="star">✦</span></span>
+    <span>Birria <span class="star">✦</span> Quesabirria <span class="star">✦</span> Enchililadas <span class="star">✦</span> Tacos <span class="star">✦</span> Cold Drinks <span class="star">✦</span> Tradition in Every Bite <span class="star">✦</span></span>
+  </div>
+</div>
+
+<!-- ============ FEATURED ============ -->
+<section class="block featured" id="featured">
+  <div class="wrap">
+    <span class="kicker reveal">The ones people drive for</span>
+    <h2 class="section-title reveal">Crowd Favorites</h2>
+    <p class="lede reveal">Three plates that say everything about us. The rest of the lineup’s on the menu below.</p>
+    <div class="feat-grid">
+      <article class="feat-card reveal">
+        <div class="ph"><!-- assets/dip.jpg --><img src="https://www.trybloom.ai/img/f15dc9ff-38e2-4e2e-bd78-0b7462ac6791" alt="Quesabirria taco with cheese pull dipped in consommé" /></div>
+        <div class="feat-body">
+          <span class="tag">Fan Favorite</span>
+          <h3>Quesabirria <span class="price">$16</span></h3>
+          <p>Griddled, cheese-pulled, and served with rich red consommé for dipping. The one you’ll film before you eat.</p>
+        </div>
+      </article>
+      <article class="feat-card reveal">
+        <div class="ph"><!-- assets/namesake.jpg --><img src="https://www.trybloom.ai/img/9945eb88-e510-4b1b-b815-0ef60ef3b44b" alt="Beef enchililadas plate with rice and beans" /></div>
+        <div class="feat-body">
+          <span class="tag">The Namesake</span>
+          <h3>Beef Enchililadas <span class="price">$10.99</span></h3>
+          <p>Our signature plate, smothered in chili gravy and cheese. Comes with rice &amp; beans. Cheese option $8.99.</p>
+        </div>
+      </article>
+      <article class="feat-card reveal">
+        <div class="ph"><!-- assets/spread.jpg --><img src="https://www.trybloom.ai/img/a6ac4672-65fe-4e16-83d1-1c8f00e8c439" alt="Full table spread of birria tacos, consommé, chips and queso" /></div>
+        <div class="feat-body">
+          <span class="tag">Feed the Crew</span>
+          <h3>Birria Tacos <span class="price">$15.25</span></h3>
+          <p>Three on corn with cheese, plus consommé. Bring the whole carload — this spread doesn’t last long.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section class="block" id="menu">
+  <div class="wrap">
+    <span class="kicker reveal">Everything we make</span>
+    <h2 class="section-title reveal">The Menu</h2>
+    <p class="lede reveal">All plates come with rice and beans. Seasonal favorites — pozole &amp; tamales — drop in when the weather’s right.</p>
+
+    <div class="menu-grid">
+      <div class="menu-cat reveal">
+        <h3>Plates</h3>
+        <div class="note">Served with rice &amp; beans</div>
+        <div class="menu-item"><span class="nm">Nombre Shut Up Enchililadas — Beef</span><span class="ln"></span><span class="pr">$10.99</span></div>
+        <div class="menu-item"><span class="nm">Enchililadas — Cheese</span><span class="ln"></span><span class="pr">$8.99</span></div>
+        <div class="menu-item"><span class="nm">Crispy Taco (2)</span><span class="ln"></span><span class="pr">$8.99</span></div>
+        <div class="menu-item"><span class="nm">Picadillo</span><span class="ln"></span><span class="pr">$8.99</span></div>
+        <div class="menu-item"><span class="nm">Birria Tacos (3, corn, cheese)</span><span class="ln"></span><span class="pr">$15.25</span></div>
+        <div class="menu-item"><span class="nm">Quesabirria</span><span class="ln"></span><span class="pr">$16.00</span></div>
+        <div class="menu-item"><span class="nm">Birria Burrito</span><span class="ln"></span><span class="pr">$16.00</span></div>
+      </div>
+
+      <div class="menu-cat reveal">
+        <h3>Birria</h3>
+        <div class="menu-item"><span class="nm">Soup w/ Cheese</span><span class="ln"></span><span class="pr">$12.00</span></div>
+        <div class="menu-item"><span class="nm">Birria Tacos (4, corn, cheese)</span><span class="ln"></span><span class="pr">$12.00</span></div>
+        <div class="menu-item"><span class="nm">Grill Cheese</span><span class="ln"></span><span class="pr">$6.99</span></div>
+        <div class="menu-item"><span class="nm">Egg Rolls (3)</span><span class="ln"></span><span class="pr">$10.00</span></div>
+        <div class="menu-item"><span class="nm">Quesabirria</span><span class="ln"></span><span class="pr">$12.00</span></div>
+      </div>
+
+      <div class="menu-cat reveal">
+        <h3>Tacos</h3>
+        <div class="menu-item"><span class="nm">Bean &amp; Cheese</span><span class="ln"></span><span class="pr">$1.99</span></div>
+        <div class="menu-item"><span class="nm">Nombre Shut Up Enchililada</span><span class="ln"></span><span class="pr">$2.99</span></div>
+        <div class="menu-item"><span class="nm">Picadillo</span><span class="ln"></span><span class="pr">$2.99</span></div>
+      </div>
+
+      <div class="menu-cat reveal">
+        <h3>Side Orders</h3>
+        <div class="menu-item"><span class="nm">Fries</span><span class="ln"></span><span class="pr">$2.75</span></div>
+        <div class="menu-item"><span class="nm">Chili Con Carne (Large)</span><span class="ln"></span><span class="pr">$14.99</span></div>
+        <div class="menu-item"><span class="nm">Chips &amp; Queso</span><span class="ln"></span><span class="pr">$5.99</span></div>
+        <div class="menu-item"><span class="nm">Bag of Chips</span><span class="ln"></span><span class="pr">$1.25</span></div>
+        <div class="menu-item"><span class="nm">OG Spam (2 crispy corn tortillas)</span><span class="ln"></span><span class="pr">$4.99</span></div>
+        <div class="menu-item"><span class="nm">Crispy Weenie Dogs (3)</span><span class="ln"></span><span class="pr">$4.99</span></div>
+        <div class="menu-item"><span class="nm">Burger w/ Fries</span><span class="ln"></span><span class="pr">$9.99</span></div>
+        <div class="menu-item"><span class="nm">Frito Pie</span><span class="ln"></span><span class="pr">$5.25</span></div>
+        <div class="menu-item"><span class="nm">Crispy Taco (1)</span><span class="ln"></span><span class="pr">$2.25</span></div>
+        <div class="menu-item"><span class="nm">Crispy Tacos (3)</span><span class="ln"></span><span class="pr">$5.75</span></div>
+        <div class="menu-item"><span class="nm">8 oz Rice</span><span class="ln"></span><span class="pr">$1.75</span></div>
+        <div class="menu-item"><span class="nm">8 oz Charro Beans</span><span class="ln"></span><span class="pr">$2.25</span></div>
+        <div class="menu-item"><span class="nm">Tx Grill Cheese</span><span class="ln"></span><span class="pr">$3.99</span></div>
+      </div>
+
+      <div class="menu-cat reveal">
+        <h3>Kids</h3>
+        <div class="menu-item"><span class="nm">Chicken Nuggets Combo (chips &amp; juice)</span><span class="ln"></span><span class="pr">$5.99</span></div>
+        <div class="menu-item"><span class="nm">Hot Dog</span><span class="ln"></span><span class="pr">$3.50</span></div>
+      </div>
+
+      <div class="menu-cat reveal">
+        <h3>Extras &amp; Sweets</h3>
+        <div class="menu-item"><span class="nm">Bacon</span><span class="ln"></span><span class="pr">$1.99</span></div>
+        <div class="menu-item"><span class="nm">Chili</span><span class="ln"></span><span class="pr">$0.99</span></div>
+        <div class="menu-item"><span class="nm">Cheese</span><span class="ln"></span><span class="pr">$0.75</span></div>
+        <div class="menu-item"><span class="nm">Grilled Onion</span><span class="ln"></span><span class="pr">$0.75</span></div>
+        <div class="menu-item"><span class="nm">French Toast (2)</span><span class="ln"></span><span class="pr">$5.99</span></div>
+      </div>
+    </div>
+
+    <div class="menu-foot reveal" id="order">
+      <a href="tel:+12105550100" class="btn btn-primary" style="font-size:1.1rem;padding:1rem 2rem"><!-- TODO:PHONE -->Order Now — Pickup &amp; Delivery</a>
+      <p style="color:var(--gray);font-size:.85rem;margin-top:.8rem">Online ordering with cart, notes &amp; Square checkout is coming to this button. For now it rings the truck.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIND US ============ -->
+<section class="block findus" id="findus">
+  <div class="wrap">
+    <span class="kicker reveal">Come hungry</span>
+    <h2 class="section-title reveal">Find the Truck</h2>
+    <div class="find-grid">
+      <div class="find-info reveal">
+        <div class="row"><span class="ic">📍</span><div><h4>Where we are</h4><p>5610 Old Pearsall Rd<br>San Antonio, TX 78242</p></div></div>
+        <div class="row"><span class="ic">🕒</span><div><h4>Hours</h4><p>Mon–Sat · 11am – 8pm<br>Sun · Closed <!-- TODO:HOURS confirm real hours --></p></div></div>
+        <div class="row"><span class="ic">📞</span><div><h4>Call the truck</h4><p><a href="tel:+12105550100">(210) 555-0100</a><!-- TODO:PHONE --></p></div></div>
+        <div class="row"><span class="ic">🎉</span><div><h4>Catch us at events</h4><p>We’re mostly parked at Old Pearsall, but we roll out for events around SA. Follow along for pop-ups.</p></div></div>
+      </div>
+      <div class="map-frame reveal">
+        <iframe title="Enchililadas location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=5610%20Old%20Pearsall%20Rd%20San%20Antonio%20TX%2078242&z=14&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="block about" id="about">
+  <div class="wrap">
+    <div class="about-head">
+      <span class="kicker reveal">Our story</span>
+      <h2 class="section-title reveal">Family Owned, San Antonio Proud</h2>
+      <p class="lede reveal" style="margin:0 auto">We started Enchililadas in 2026 with a simple idea: serve the food we grew up on, make people laugh, and never skimp on flavor. Every recipe is homemade, every plate is made to order.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal"><div class="emoji">✅</div><h4>Safe &amp; Legal</h4><p>Fully licensed and health-inspected. Order with confidence.</p></div>
+      <div class="pillar reveal"><div class="emoji">🌶️</div><h4>Delicious Flavors</h4><p>Homemade recipes passed down and perfected. No shortcuts.</p></div>
+      <div class="pillar reveal"><div class="emoji">❤️</div><h4>Support Local</h4><p>A family-owned San Antonio business. Every order matters to us.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BIG CTA ============ -->
+<section class="cta">
+  <div class="cta-bg"><!-- assets/spread.jpg --><img src="https://www.trybloom.ai/img/a6ac4672-65fe-4e16-83d1-1c8f00e8c439" alt="" /></div>
+  <div class="inner">
+    <p>you’re gonna say it…</p>
+    <h2>Nombre, <span class="c">Shut Up</span></h2>
+    <a href="tel:+12105550100" class="btn btn-primary" style="font-size:1.1rem;padding:1rem 2.2rem"><!-- TODO:PHONE -->Order Now</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand">EN<span style="color:var(--chili)">CHILI</span>LADAS</div>
+        <p>Authentic San Antonio Tex-Mex. Traditional food, tasty enchiladas, cold drinks. Where tradition meets every bite.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><!-- TODO:FB --><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" aria-label="TikTok"><!-- TODO:TIKTOK --><svg viewBox="0 0 24 24"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3v12.2a2.5 2.5 0 1 1-2.5-2.5c.26 0 .5.04.74.1V9.7a5.6 5.6 0 0 0-.74-.05A5.55 5.55 0 1 0 15.6 15V9.3a7.3 7.3 0 0 0 4.3 1.4V7.7a4.3 4.3 0 0 1-3.3-1.9z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Visit</h5>
+        <ul>
+          <li>5610 Old Pearsall Rd</li>
+          <li>San Antonio, TX 78242</li>
+          <li><a href="https://maps.google.com/maps?q=5610%20Old%20Pearsall%20Rd%20San%20Antonio%20TX%2078242" target="_blank" rel="noopener">Get Directions →</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Order &amp; Contact</h5>
+        <ul>
+          <li><a href="tel:+12105550100"><!-- TODO:PHONE -->(210) 555-0100</a></li>
+          <li><a href="mailto:hello@nombre-shut-up.com"><!-- TODO:EMAIL -->hello@nombre-shut-up.com</a></li>
+          <li><a href="#menu">View Menu</a></li>
+          <li><a href="#order">Order Online</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Enchililadas · Nombre Shut Up — All rights reserved.</span>
+      <span>Site by Top Hat Media</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Staggered scroll reveal
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{
+    el.style.transitionDelay=(Math.min(i%6,5)*70)+'ms';
+    io.observe(el);
+  });
+  // Trigger hero reveals immediately
+  document.querySelectorAll('.hero .reveal').forEach((el,i)=>{
+    setTimeout(()=>el.classList.add('in'),120+i*120);
+  });
+  // Close mobile menu on link tap
+  document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+</script>
+</body>
+</html>
